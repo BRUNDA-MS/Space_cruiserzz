@@ -11,27 +11,58 @@
    background-repeat: no-repeat;
    background-size: cover;
  }
+ img {
+   width: 100%;
+   height: 100%;
+}
+
  #rectangle {
    margin: auto;
   width: 50%;
   height: 50%;
   border: 2px solid white;
  padding: 10px;
- background-image: url('https://www.nasa.gov/sites/default/files/styles/stem_hero/public/thumbnails/image/edu_srch_color_your_universe.png');
- background-size: auto;
- background-repeat: no-repeat;
 
 }
-
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 15%;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.h_iframe iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
 </style>
+
 </head>
 <body>
 <h1> THE SUN </h1>
+<div class="split left">
+<a href="https://spaceplace.nasa.gov/color-your-universe-game/en/" onclick="load_home()">
 
-<!--<a href="https://spaceplace.nasa.gov/color-your-universe-game/en/" onclick="load_home()">-->
-  <div id="rectangle" onclick="location.href='https://spaceplace.nasa.gov/color-your-universe-game/en/';">
+  <div id="rectangle">
+    <img src="https://www.nasa.gov/sites/default/files/styles/stem_hero/public/thumbnails/image/edu_srch_color_your_universe.png">
 </div>
-
-
+</a>
+</div>
+<div class="split right">
+  <div class="h_iframe">
+    <iframe src="https://eyes.nasa.gov/apps/orrery/#/home" frameborder="0" allowfullscreen></iframe>
+  </div></div>
 </body>
 </html>
+
